@@ -10,7 +10,7 @@ import os
 
 @st.cache
 def load_app_data():
-    path = os.path(__file__)
+    path = os.path.dirname(__file__)
     features = pickle.load(open(path+'/features.pkl','rb'))
     model = pickle.load(open(path+'/mlm_model.sv','rb'))
     return features, model
