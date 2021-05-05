@@ -8,12 +8,10 @@ import boto3
 from datetime import date as dt
 import os
 
-print(os.listdir())
-
 @st.cache
 def load_app_data():
-    features = pickle.load(open('features.pkl','rb'))
-    model = pickle.load(open('mlm_model.sv','rb'))
+    features = pickle.load(open('/features.pkl','rb'))
+    model = pickle.load(open('/mlm_model.sv','rb'))
     return features, model
 
 features, model = load_app_data()
