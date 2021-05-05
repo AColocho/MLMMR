@@ -1,10 +1,14 @@
 from collections import Counter
+from numpy.core.fromnumeric import partition
 import streamlit as st
 from spacy.symbols import ORTH
 import spacy
 import pickle
 import boto3
 from datetime import date as dt
+import os
+
+print(os.listdir())
 
 @st.cache
 def load_app_data():
@@ -59,6 +63,7 @@ st.write()
 """
 # Multi Level Marketing Message Recognizer (MLMMR)
 This app is powered by a machine learning model that classifies messages into MLM or non-MLM. You can find more info about it [here](https://github.com/AColocho/MLMMR)
+With more data, we are trying to expand this app to be a helpful tool into classifying potential job recruiting scam messages.
 
 Enter your message in the space below to run it through the model.
 """
