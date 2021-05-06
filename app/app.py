@@ -27,7 +27,7 @@ def vectorize(data,features):
     return [vector]
 
 def clean_text(data):
-    nlp = spacy.load('en')
+    nlp = spacy.load('en_core_web_sm')
     special_case = [{ORTH: "e-commerce"}]
     nlp.tokenizer.add_special_case("e-commerce", special_case)
     
