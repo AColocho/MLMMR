@@ -2,7 +2,7 @@ from collections import Counter
 from numpy.core.fromnumeric import partition
 import streamlit as st
 from spacy.symbols import ORTH
-import spacy
+import en_core_web_sm
 import pickle
 import boto3
 from datetime import date as dt
@@ -27,7 +27,7 @@ def vectorize(data,features):
     return [vector]
 
 def clean_text(data):
-    nlp = spacy.load('en_core_web_sm')
+    nlp = en_core_web_sm.load()
     special_case = [{ORTH: "e-commerce"}]
     nlp.tokenizer.add_special_case("e-commerce", special_case)
     
