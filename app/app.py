@@ -45,7 +45,7 @@ def clean_text(data):
 
 def update_db_data(new_text_data):
     date = str(dt.today())
-    dynamodb = boto3.resource('dynamodb',region_name='us-east-1')
+    dynamodb = boto3.resource('dynamodb',region_name=os.environ.get('AWS_DEFAULT_REGION'))
     table = dynamodb.Table('MLMMR')
     try:
         response = table.get_item(Key={'data':date})
