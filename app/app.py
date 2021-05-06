@@ -62,7 +62,6 @@ st.write()
 """
 # Multi Level Marketing Message Recognizer (MLMMR)
 # 
-#
 This app is powered by a machine learning model that classifies messages into MLM or non-MLM. You can find more info about it [here](https://github.com/AColocho/MLMMR)
 With more data, we are trying to expand this app to be a helpful tool into classifying potential job recruiting scam messages.
 
